@@ -17,5 +17,9 @@ $app->get('/', function () use ($app) {
 
 
 $app->get('rain', [
-    'as' => 'rain', 'uses' => 'RainController@rain'
+    'as' => 'rain', 'uses' => 'RainController@index'
+]);
+
+$app->post('rain', [
+    'as' => 'rain', 'uses' => 'RainController@store'
 ]);
